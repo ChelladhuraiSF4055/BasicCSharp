@@ -7,10 +7,12 @@ class Program{
         int a=Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Input2: ");
         int b=Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine($"Addition: {add(a,b)}");
-        Console.WriteLine($"Subraction: {Sub(a,b)}");
-        Console.WriteLine($"Multiplication: {mul(a,b)}");
-        Console.WriteLine($"Division: {Div(a,b)}");
+        Program one=new Program();
+        Console.WriteLine($"Addition: {one.add(a,b)}");
+        Console.WriteLine($"Subraction: {one.Sub(a,b)}");
+        Console.WriteLine($"Multiplication: {one.mul(a,b)}");
+        Console.WriteLine($"Division: {one.Div(a,b)}");
+    }
         int add(int x,int y)
         {
             return x+y;
@@ -25,7 +27,7 @@ class Program{
         }
         float Div(int x, int y)
         {
-            return (float)a/b;
+            return (float)x/y;
         }
-    }   
+       
 }

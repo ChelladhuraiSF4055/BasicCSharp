@@ -6,25 +6,27 @@ class Program{
         int flag=0;
         Console.WriteLine("Input a number: ");
         int n =Convert.ToInt32(Console.ReadLine());
-        prime(n);
-
-        void prime(int x)
+        Program i=new Program();
+        flag=i.prime(n);
+        if(flag==0)
         {
-            for(int i=1;i<=(x/2);i++)
-            {
-                if(i%2==0)
-                {
-                    flag=1;
-                }
-            }
-        if(flag==1)
-        {
-        Console.WriteLine($"{x} is  a prime number.");
+        Console.WriteLine($"{n} is  a prime number.");
         }
         else
         {
-            Console.WriteLine($"{x} is not a prime number");
-        }
+            Console.WriteLine($"{n} is not a prime number");
         }
     }
+    int  prime(int x)
+    {
+        for(int i=1;i<=(x/2);i++)
+        {
+            if(i%2==0)
+            {
+                return 1;
+            }
+        }
+    return 0;
+    }
+    
 }

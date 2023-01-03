@@ -5,6 +5,12 @@ class Program{
     {
         Console.Write("Input a string:");
         string name=Console.ReadLine();
+        Program i=new Program();
+        i.Calculate(name);
+        
+    }
+    void Calculate(string name)
+    {
         int n=name.Length;
         if(isPalindrome(name,0))
         {
@@ -32,13 +38,15 @@ class Program{
         }
         */
         //using recursion
-        bool isPalindrome(string s,int i)
+        static bool isPalindrome(string s,int i)
         {
-            if(i>s.Length/2){
+            if(i>s.Length/2)
+            {
                 return true;
             }
             return s[i]==s[s.Length-i-1] && isPalindrome(s,i+1);
         }
+    
     }
         
 }

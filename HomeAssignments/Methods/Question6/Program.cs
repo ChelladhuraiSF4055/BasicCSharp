@@ -7,8 +7,8 @@ class Program{
         int n=Convert.ToInt32(Console.ReadLine());
         Console.Write($"The factorial of {n}! is :");
         Console.WriteLine(fact(n));
-
-        int fact(int x)
+    }
+        static int fact(int x)
         {
             int mul=1;
             while(x!=0)
@@ -18,5 +18,5 @@ class Program{
             }
             return mul;
         }
-    }
+    
 }
